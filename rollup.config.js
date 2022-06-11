@@ -2,7 +2,7 @@ import buble from '@rollup/plugin-buble';
 import { terser } from 'rollup-plugin-terser';
 
 export default {
-  input: 'src/index.js',
+  input: 'src/script.js',
   output: {
     file: 'dist/script.js',
     format: 'iife',
