@@ -22,11 +22,13 @@
   if (!id) return;
 
   try {
-    await fetch(API_ORIGIN + PATH + '?id=' + id, {
+    const res = await fetch(API_ORIGIN + PATH + '?id=' + id, {
       mode: 'cors',
       method: 'GET',
-    })
+    });
+    if (res.status !== 200) return;
   } catch (err) {
+    console.log(err);
     return;
   }
 
